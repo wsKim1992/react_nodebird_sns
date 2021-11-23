@@ -1,0 +1,8 @@
+-rest api 규칙:
+    get : 가져오다
+    post : 생성하다.
+    put : 전체수정
+    patch : 부분수정
+    delete : 삭제
+    options : 찔러보기
+    head: 헤더만 가져오기

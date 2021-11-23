@@ -1,0 +1,1 @@
+1. onFinish 에선 e.preventDefault() 가 적용되어 있음.

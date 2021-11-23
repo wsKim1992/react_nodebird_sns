@@ -1,0 +1,6 @@
+1. next.js 는 pages 폴더(이름 고정)를 인식하여,내부 파일들을 모두
+개별적인 페이지로 만들어줌. 즉 Code-splitting 되어진 component 들로
+변환해줄 수 있다. next 를 실행 하면 localhost 가 실행되면서
+page 폴더를 root으로 해서 주소를 입력하면 인식함.(.js 파일로)
+
+2. next.js 를 사용할 떄는 React 패키지를 import 해줄 필요가 없음..

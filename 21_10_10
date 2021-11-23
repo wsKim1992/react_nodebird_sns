@@ -1,0 +1,16 @@
+1. Next 에서 page 디렉토리 내부에 정의된 각각의 페이지에 공통적으로 적용
+할만한 요소들은 page 디렉토리 내부에 _app.js 라는 파일에서 정의된다.
+
+2. Next 에서 html 파일의 header 부분을 재정의 하고 싶으면 next/head 
+에서 <Head> 요소를 import 해준뒤 <title> 이나 <meta> 등의 head 내부
+요소들을 재정의해줌.
+
+3. react 에서 virtual-dom 에 in-line으로 css를 변경하거나 하는데,
+그런건 지양해야한다. 왜냐면 리렌더링할 때 , style={{}} 에 내부의
+js 객체 ({}) 를 비교한 뒤 무조껀 다르다고 판별이 되어지기 때문!
+    ※{}==={} 는 false 값이 나온다.
+    - 해결책:
+        - useMemo를 사용해서 css값을 정의 해주거나,
+        - import styled from 'styled-component'를 해주어서
+        const ButtonWrapper = styled.div`margin-top:10px;`
+        해주거나.

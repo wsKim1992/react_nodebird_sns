@@ -1,0 +1,24 @@
+※Redux - Saga
+    - Generator : 
+        - function keyword 앞에 * 붙힘
+            ex) const gen = function*(){}
+        - generator 을 실행할 때는 Generator의 next() 맴버 매서드를 실행시켜야 함!!
+            ex) gen().next()
+        - yield 란?
+            ex)
+                const gen = function* (){
+                    console.log(1);
+                    yield;
+                    console.log(2);
+                    yield;
+                    console.log(3);
+                    yield 4;
+                }
+                여기서 
+                gen().next() 호출하면 
+                1 이 찍히고 첫번쨰 yield 에서 실행이 멈춘다.
+                또 다시 gen().next() 를 호출하면
+                2 가 찍히고 두 번째 yield 에서 실행이 멈춘다.
+                마지막에 호출하면 3이 찍히고 {value:4,done:false}를 반환
+                다시 한 번 더 호출하면 {value:undefined,done:true} 를 반환.
+        
